@@ -49,7 +49,8 @@ Good luck, and welcome to the bomb squad.
 
 ### 2.2 How to hand in
 
-1. Put your answers in `solution.txt`, commit, and push to your fork.
+1. Create your own repository from this template (**Use this template**), then put your
+   answers in `solution.txt`, commit, and push.
 2. Open the **Actions** tab → select `Autograde` → **Run workflow**.
 3. Open the finished run: the grading report is in the **Summary** section at the bottom
    (and also available as the `autograde-report` artifact).
