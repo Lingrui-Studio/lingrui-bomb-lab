@@ -28,8 +28,7 @@ Good luck, and welcome to the bomb squad.
 
 > ⚠️ **Warning: do not try to defuse the bomb by brute force.** The bomb is not designed to be
 > brute-forced, and you have better things to do with your CPU cycles. You are expected to *read the
-> assembly* and to *use a debugger* — that is the whole point of this lab.
-
+> assembly* and to *use a debugger*.
 ---
 
 ## 2. Logistics
@@ -119,5 +118,5 @@ still produces a report showing exactly which phases are done.
 
 ## 5. References
 
-- *Computer Systems: A Programmer's Perspective* (CS:APP), Chapter 3 — the theory behind this lab.
-- The CS:APP Bomb Lab writeup (Carnegie Mellon University) — the original assignment this is based on.
+- *Computer Systems: A Programmer's Perspective* (CS:APP), Chapter 3
+- The CS:APP Bomb Lab writeup (Carnegie Mellon University)
