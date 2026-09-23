@@ -1,0 +1,41 @@
+name: Autograde
+
+# Manual trigger: repository page -> Actions -> Autograde -> Run workflow
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "solution.txt"
+
+permissions:
+  contents: read
+
+jobs:
+  autograde:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v4
+
+      - name: Show environment info
+        run: |
+          uname -a
+          file ./bomb
+
+      - name: Run the autograder
+        run: bash tools/autograde.sh solution.txt
+
+      - name: Publish the grading report (Actions summary)
+        if: always()
+        run: |
+          if [ -f autograde-report.md ]; then
+            cat autograde-report.md >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      - name: Upload the grading report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: autograde-report
+          path: autograde-report.md
+          if-no-files-found: ignore

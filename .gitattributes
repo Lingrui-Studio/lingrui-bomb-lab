@@ -1,0 +1,7 @@
+# Everything is a text file with LF line endings, unless noted otherwise.
+# (Without this, cloning on Windows would turn tools/*.sh into CRLF and break them.)
+* text=auto eol=lf
+
+# Never touch this binary (no line-ending conversion, no text handling)
+bomb binary
+*.sha256 -text
